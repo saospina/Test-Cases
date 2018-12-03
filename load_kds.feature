@@ -16,4 +16,11 @@ Feature: Load functionality
         And More than one order is selected
         When I click on Load button on an order
         And the I click on Load button on another orderam
-        Then I should see the available compartment and put the order there for both orders
+        Then I should see the available compartments and put the order there for both orders
+
+        Scenario: Use a wrong compartment
+        Given there are more than one position configured
+        When I click on Load button on an order
+        When I use a diferent compartment to put the order
+        Then I receive an alert that It shows the wrong position
+        
