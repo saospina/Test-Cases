@@ -23,3 +23,16 @@ Feature: Load functionality
         When I click on Load button on an order
         When I use a diferent compartment to put the order
         Then I receive an alert that It shows the wrong position
+
+        @frictionless
+        Scenario: Verify lights for Load using frictionless option 
+        Given I have a physical order
+        Given The compartment is empty
+        Given I put the order into the compartment
+        Then The compartment loaded shines to magenta
+
+        
+
+
+
+
