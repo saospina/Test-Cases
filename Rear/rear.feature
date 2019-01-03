@@ -15,4 +15,16 @@ Feature: Scaning a order code to load the order on a locker
         When I select the buttons
         Then I get the numbers in the input label
 
-        Scenario: Cancel a request scan
+    Scenario: Cancel a request scan
+        Given I get the numbers in the input label
+        When I select the Submit button
+        Then I can select a new button named Cancel
+        And the order is cancelled
+
+    Scenario: Request more posittions
+        Given I have a order load code
+        Given I am in the rear view
+        When I write the code into the input label
+        When I select Submit button
+        Then Appears a new button named More 
+        And I can select it to use a new compartment
