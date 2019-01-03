@@ -28,3 +28,14 @@ Feature: Scaning a order code to load the order on a locker
         When I select Submit button
         Then Appears a new button named More 
         And I can select it to use a new compartment
+
+        Scenario: Wait for 5 minutes for a compartment
+        Given I have a order load code
+        Given I am in the rear view
+        When I write the code into the input label
+        When I select Submit button
+        When I waite for several minutes
+        Then the system should return to initial Scan Screen after 20 second timeout 
+        
+
+
