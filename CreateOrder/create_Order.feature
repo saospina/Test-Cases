@@ -121,3 +121,7 @@ Feature: Create an order as a user of Apex I should be able to create and add it
         And I select <delete item>
 
         Then The items do not appear in the order
+
+screen car
+--- when I have 2 digites must show in middle 
+--- not assign verify when the item is alcoholic

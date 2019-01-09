@@ -21,7 +21,7 @@ Feature: Scaning a order code to load the order on a locker
         Then I can select a new button named Cancel
         And the order is cancelled
 
-    Scenario: Request more posittions
+    Scenario: Request more posittions (no esta implementado)
         Given I have a order load code
         Given I am in the rear view
         When I write the code into the input label
@@ -29,7 +29,7 @@ Feature: Scaning a order code to load the order on a locker
         Then Appears a new button named More 
         And I can select it to use a new compartment
 
-        Scenario: Wait for 5 minutes for a compartment
+        Scenario: Wait for 5 minutes for a compartment (no esta)
         Given I have a order load code
         Given I am in the rear view
         When I write the code into the input label
@@ -37,5 +37,11 @@ Feature: Scaning a order code to load the order on a locker
         When I waite for several minutes
         Then the system should return to initial Scan Screen after 20 second timeout 
         
+ready
+dispense- schedule
 
+pending
+alerts solo en el undocode
+no tiene vlidacion cuando ingreso un loadcode ya loaded
+no es coherente la posicion que muestra con la asignada
 
