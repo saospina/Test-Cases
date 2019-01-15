@@ -29,7 +29,7 @@ Feature: Scaning a order code to load the order on a locker
         Then Appears a new button named More 
         And I can select it to use a new compartment
 
-        Scenario: Wait for 5 minutes for a compartment (no esta)
+        Scenario: Wait for 5 minutes for a compartment (pending)
         Given I have a order load code
         Given I am in the rear view
         When I write the code into the input label

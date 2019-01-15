@@ -62,7 +62,7 @@ Feature: Scaning a order code to picked up  the order on a locker
         Given I write the code into the input label
         When I don't take the order from locker compartment
         Then ???
-    Scenario: Pickup when there are an orders in LockDown and Verify status
+    Scenario: Pickup when there are orders in LockDown and Verify status
         Given I have a clientCode
         Given I have an item in LockDown status
         Given I have an item with Verify
@@ -75,5 +75,5 @@ Feature: Scaning a order code to picked up  the order on a locker
         Given I am in the customer view
         When I write the code into the input label
         Then The system shows the following message "Code needs to be larger than 4 digits"
-        
+
 
