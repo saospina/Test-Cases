@@ -2,7 +2,7 @@ Feature: Scanning a Load code to a locker
 
     This feature Describe how Rear application works
 
-    Scenario: Scan a load ode to asign a position
+    Scenario: Scan a load code to asign a position
         Given I have a order load code
         Given I am in the rear view
         When I type the code into the input label
@@ -10,6 +10,12 @@ Feature: Scanning a Load code to a locker
         Then Appears an animation to indicates the correct compartment with green colour to use it.
 
     Scenario: Cancel a load of an Order
+        Given I am in the rear view
+        When I click on the Cancel button
+        Then The position must be freed
+        And I should can use the codeload again
+    
+    Scenario: Cancel a load of an Item
         Given I am in the rear view
         When I click on the Cancel button
         Then The position must be freed
